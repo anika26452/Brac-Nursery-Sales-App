@@ -1,0 +1,925 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".MortalityActivity">
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="5dp">
+
+            <TextView
+                android:layout_gravity="center"
+                android:textColor="@color/darkgreen"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:text="Location Details"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"></TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="100">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="30"
+                android:text="Organization"
+                android:textColor="@color/brdarkgreen"
+                android:textStyle="bold"
+                android:textSize="15dp">
+
+            </TextView>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:text=":"
+                android:gravity="end"
+                android:textColor="@color/brdarkgreen"
+                android:textStyle="bold"
+                android:textSize="15dp">
+
+            </TextView>
+
+            <TextView
+                android:layout_marginLeft="5dp"
+                android:id="@+id/org_textvw"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="65"
+                android:text=""
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="15dp">
+
+            </TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="100">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="30"
+                android:text="Warehouse"
+                android:textColor="@color/brdarkgreen"
+                android:textStyle="bold"
+                android:textSize="15dp">
+
+            </TextView>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:text=":"
+                android:gravity="end"
+                android:textColor="@color/brdarkgreen"
+                android:textStyle="bold"
+                android:textSize="15dp">
+
+            </TextView>
+
+            <TextView
+                android:layout_marginLeft="5dp"
+                android:id="@+id/warehouse_textvw"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="65"
+                android:text=""
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="15dp">
+
+            </TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="100">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="35"
+                android:text="Date of Report"
+                android:layout_gravity="center"
+                android:textColor="@color/brdarkgreen"
+                android:textStyle="bold"
+                android:textSize="15dp">
+
+            </TextView>
+            <TextView
+                android:layout_gravity="center"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text=":"
+                android:gravity="end"
+                android:textColor="@color/brdarkgreen"
+                android:textStyle="bold"
+                android:textSize="15dp">
+
+            </TextView>
+
+            <TextView
+                android:layout_gravity="center"
+                android:layout_marginLeft="5dp"
+                android:id="@+id/date_textvw"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="50"
+                android:text=""
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="15dp">
+
+            </TextView>
+
+            <ImageView
+
+                android:layout_weight="10"
+                android:id="@+id/calendar_btn"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:layout_width="20dp"
+                android:layout_gravity="center"
+                android:layout_height="35dp"
+                android:src="@drawable/calendar">
+<!--                android:onClick="onClickCalendarPicker"-->
+            </ImageView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="100">
+
+            <TextView
+                android:layout_gravity="center"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="30"
+                android:text="Reference Document Type"
+                android:textColor="@color/brdarkgreen"
+                android:textStyle="bold"
+                android:textSize="15dp">
+
+            </TextView>
+            <TextView
+                android:layout_gravity="center"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:text=":"
+                android:gravity="end"
+                android:textColor="@color/brdarkgreen"
+                android:textStyle="bold"
+                android:textSize="15dp">
+
+            </TextView>
+
+            <Spinner
+                android:layout_marginLeft="5dp"
+                android:layout_width="0dp"
+                android:layout_weight="65"
+                android:layout_height="wrap_content"
+                android:background="@android:drawable/btn_dropdown"
+                android:id="@+id/documenttype_spinner"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="100">
+
+            <TextView
+                android:layout_gravity="center"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="30"
+                android:text="Reference Document No"
+                android:textColor="@color/brdarkgreen"
+                android:textStyle="bold"
+                android:textSize="15dp">
+
+            </TextView>
+            <TextView
+                android:layout_gravity="center"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:text=":"
+                android:gravity="end"
+                android:textColor="@color/brdarkgreen"
+                android:textStyle="bold"
+                android:textSize="15dp">
+
+            </TextView>
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="55"
+                android:gravity="center"
+                android:id="@+id/documentno_editText"
+                android:backgroundTint="@color/black"
+                android:textColor="@android:color/black"
+                android:hint="Search"
+                android:textColorHint="#6a7170"
+                />
+
+            <ImageView
+                android:onClick="onClickDocumentNo"
+                android:layout_weight="10"
+                android:id="@+id/next_btn"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:layout_width="20dp"
+                android:layout_gravity="center"
+                android:layout_height="35dp"
+                android:src="@drawable/next">
+            </ImageView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="100">
+
+            <TextView
+                android:layout_gravity="center"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="30"
+                android:text="Select Block"
+                android:textColor="@color/brdarkgreen"
+                android:textStyle="bold"
+                android:textSize="15dp">
+
+            </TextView>
+            <TextView
+                android:layout_gravity="center"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:text=":"
+                android:gravity="end"
+                android:textColor="@color/brdarkgreen"
+                android:textStyle="bold"
+                android:textSize="15dp">
+
+            </TextView>
+
+            <Spinner
+                android:layout_marginLeft="5dp"
+                android:layout_width="0dp"
+                android:layout_weight="65"
+                android:layout_height="wrap_content"
+                android:background="@android:drawable/btn_dropdown"
+                android:id="@+id/block_spinner" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="100">
+
+            <TextView
+                android:layout_gravity="center"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="30"
+                android:text="Select Plot"
+                android:textColor="@color/brdarkgreen"
+                android:textStyle="bold"
+                android:textSize="15dp">
+
+            </TextView>
+            <TextView
+                android:layout_gravity="center"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:text=":"
+                android:gravity="end"
+                android:textColor="@color/brdarkgreen"
+                android:textStyle="bold"
+                android:textSize="15dp">
+
+            </TextView>
+
+            <Spinner
+                android:layout_marginLeft="5dp"
+                android:layout_width="0dp"
+                android:layout_weight="65"
+                android:layout_height="wrap_content"
+                android:background="@android:drawable/btn_dropdown"
+                android:id="@+id/plot_spinner" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="100">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="30"
+                android:text="Remarks"
+                android:textColor="@color/brdarkgreen"
+                android:textStyle="bold"
+                android:textSize="15dp">
+
+            </TextView>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:text=":"
+                android:gravity="end"
+                android:textColor="@color/darkgreen"
+                android:textStyle="bold"
+                android:textSize="15dp">
+
+            </TextView>
+
+            <EditText
+                android:layout_marginLeft="5dp"
+                android:id="@+id/remarks_edittext"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="65"
+                android:text=""
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="15dp">
+
+            </EditText>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="30dp">
+
+            <TextView
+                android:layout_gravity="center"
+                android:textColor="@color/darkgreen"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:text="Product Selection"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"></TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="100">
+
+            <TextView
+                android:layout_gravity="center"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="30"
+                android:text="Parent Category"
+                android:textColor="@color/brdarkgreen"
+                android:textStyle="bold"
+                android:textSize="15dp">
+
+            </TextView>
+            <TextView
+                android:layout_gravity="center"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:text=":"
+                android:gravity="end"
+                android:textColor="@color/brdarkgreen"
+                android:textStyle="bold"
+                android:textSize="15dp">
+
+            </TextView>
+
+            <Spinner
+                android:layout_marginLeft="5dp"
+                android:layout_width="0dp"
+                android:layout_weight="65"
+                android:layout_height="wrap_content"
+                android:background="@android:drawable/btn_dropdown"
+                android:id="@+id/parentcat_spinner" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="100">
+
+            <TextView
+                android:layout_gravity="center"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="30"
+                android:text="Product Category"
+                android:textColor="@color/brdarkgreen"
+                android:textStyle="bold"
+                android:textSize="14dp">
+
+            </TextView>
+            <TextView
+                android:layout_gravity="center"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:text=":"
+                android:gravity="end"
+                android:textColor="@color/brdarkgreen"
+                android:textStyle="bold"
+                android:textSize="15dp">
+
+            </TextView>
+
+            <Spinner
+                android:layout_marginLeft="5dp"
+                android:layout_width="0dp"
+                android:layout_weight="65"
+                android:layout_height="wrap_content"
+                android:background="@android:drawable/btn_dropdown"
+                android:id="@+id/productcat_spinner" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:weightSum="100">
+
+            <TextView
+                android:layout_gravity="center"
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="35"
+                android:textSize="14sp"
+                android:backgroundTint="@android:color/holo_blue_bright"
+                android:textColor="@color/brdarkgreen"
+                android:textStyle="bold"
+                android:text="Product Search"/>
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="65"
+                android:gravity="center"
+                android:id="@+id/search_customer_editText"
+                android:backgroundTint="@color/bracgreen"
+                android:textColor="@android:color/black"
+                android:hint="Search"
+                android:textColorHint="#6a7170"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="5dp"
+            android:weightSum="100"
+            android:gravity="end">
+
+            <CheckBox
+                android:gravity="center"
+                android:layout_width="0dp"
+                android:layout_weight="64"
+                android:layout_height="wrap_content"
+                android:text="Search By Code"
+                android:textColor="@color/black"
+                android:id="@+id/search_code_checkbox"
+                android:buttonTint="@color/bracgreen"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="100">
+
+            <TextView
+                android:layout_gravity="center"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="30"
+                android:text="Select Product"
+                android:textColor="@color/brdarkgreen"
+                android:textStyle="bold"
+                android:textSize="14dp">
+
+            </TextView>
+            <TextView
+                android:layout_gravity="center"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:text=":"
+                android:gravity="end"
+                android:textColor="@color/brdarkgreen"
+                android:textStyle="bold"
+                android:textSize="15dp">
+
+            </TextView>
+
+            <Spinner
+                android:layout_marginLeft="5dp"
+                android:layout_width="0dp"
+                android:layout_weight="65"
+                android:layout_height="wrap_content"
+                android:background="@android:drawable/btn_dropdown"
+                android:id="@+id/product_spinner" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Check History"
+                android:padding="10dp"
+                android:textAllCaps="false"
+                android:backgroundTint="@color/bracgreen"
+                android:id="@+id/chkhistory_button"
+                android:layout_gravity="center"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textColor="@color/white"
+                />
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="30dp">
+
+            <TextView
+                android:layout_gravity="center"
+                android:textColor="@color/darkgreen"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:text="Mortality Details"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"></TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="100">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="30"
+                android:text="Mortality QTY"
+                android:textColor="@color/brdarkgreen"
+                android:textStyle="bold"
+                android:textSize="15dp">
+
+            </TextView>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:text=":"
+                android:gravity="end"
+                android:textColor="@color/darkgreen"
+                android:textStyle="bold"
+                android:textSize="15dp">
+
+            </TextView>
+
+            <EditText
+                android:layout_marginLeft="5dp"
+                android:id="@+id/morqty_edittext"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="65"
+                android:inputType="number"
+                android:hint="Enter Mortality QTY"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="15dp">
+
+            </EditText>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="100">
+
+            <TextView
+                android:layout_gravity="center"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="30"
+                android:text="Reason Types"
+                android:textColor="@color/brdarkgreen"
+                android:textStyle="bold"
+                android:textSize="15dp">
+
+            </TextView>
+            <TextView
+                android:layout_gravity="center"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:text=":"
+                android:gravity="end"
+                android:textColor="@color/brdarkgreen"
+                android:textStyle="bold"
+                android:textSize="15dp">
+
+            </TextView>
+
+            <Spinner
+                android:layout_marginLeft="5dp"
+                android:layout_width="0dp"
+                android:layout_weight="65"
+                android:layout_height="wrap_content"
+                android:background="@android:drawable/btn_dropdown"
+                android:id="@+id/reasontype_spinner"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="100">
+
+            <TextView
+                android:layout_gravity="center"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="30"
+                android:text="Reason"
+                android:textColor="@color/brdarkgreen"
+                android:textStyle="bold"
+                android:textSize="15dp">
+
+            </TextView>
+            <TextView
+                android:layout_gravity="center"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:text=":"
+                android:gravity="end"
+                android:textColor="@color/brdarkgreen"
+                android:textStyle="bold"
+                android:textSize="15dp">
+
+            </TextView>
+
+            <Spinner
+                android:layout_marginLeft="5dp"
+                android:layout_width="0dp"
+                android:layout_weight="65"
+                android:layout_height="wrap_content"
+                android:background="@android:drawable/btn_dropdown"
+                android:id="@+id/reason_spinner"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:textColor="@color/brdarkgreen"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:text="Product's Image"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="35">
+            </TextView>
+
+            <Button
+                android:layout_width="0dp"
+                android:textColor="@color/white"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:backgroundTint="@color/darkgreen"
+                android:padding="2dp"
+                android:text="Upload Image"
+                android:textAllCaps="false"
+                android:id="@+id/browsebtn"
+                android:layout_weight="65">
+            </Button>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/imagelayout"
+            android:visibility="gone"
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+
+            <ImageView
+                android:layout_gravity="center"
+                android:id="@+id/imageview"
+                android:layout_width="380dp"
+                android:layout_height="200dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.078" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:textColor="@color/white"
+                android:paddingLeft="50dp"
+                android:paddingRight="50dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Add Product"
+                android:onClick="callConfirm"
+                android:textAllCaps="false"
+                android:backgroundTint="@color/darkgreen"
+                android:id="@+id/addproduct_button"
+                android:layout_gravity="center" />
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:id="@+id/proviewlayout"
+            android:orientation="vertical"
+            android:visibility="visible"
+            android:layout_marginTop="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:background="@color/bracgreen"
+                android:weightSum="100">
+
+                <TextView
+                    android:text="Product Code"
+                    android:textColor="@color/white"
+                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_weight="18"
+                    android:textAllCaps="false"
+                    android:textStyle="bold"
+                    android:textSize="12sp"
+                    android:layout_gravity="center"
+                    android:gravity="center">
+                </TextView>
+
+                <TextView
+                    android:text="Product Name"
+                    android:textColor="@color/white"
+                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_weight="38"
+                    android:textAllCaps="false"
+                    android:textStyle="bold"
+                    android:textSize="12sp"
+                    android:layout_gravity="center"
+                    android:gravity="center">
+                </TextView>
+
+                <TextView
+                    android:text="Mortality QTY"
+                    android:textColor="@color/white"
+                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_weight="28"
+                    android:textAllCaps="false"
+                    android:textStyle="bold"
+                    android:textSize="12sp"
+                    android:layout_gravity="center"
+                    android:gravity="center">
+                </TextView>
+                <TextView
+                    android:text="Cancel"
+                    android:textColor="@color/white"
+                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_weight="16"
+                    android:textAllCaps="false"
+                    android:textStyle="bold"
+                    android:textSize="12sp"
+                    android:layout_gravity="center"
+                    android:gravity="center">
+                </TextView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_weight="67"
+                android:orientation="vertical">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/showmortalityrecyclervw"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:gravity="center"
+                android:layout_marginBottom="30dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:textColor="@color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Send to server"
+                    android:padding="10dp"
+                    android:textAllCaps="false"
+                    android:backgroundTint="@color/darkgreen"
+                    android:id="@+id/sendtoserver_button"
+                    android:layout_gravity="center"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

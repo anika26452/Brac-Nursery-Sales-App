@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:padding="10dp"
+    tools:context=".HowToOrder">
+<Button
+    android:layout_marginTop="50dp"
+    android:text="Choose Product"
+    android:padding="15dp"
+    android:backgroundTint="@color/bracgreen"
+    android:textColor="@color/white"
+    android:textSize="15sp"
+    android:textStyle="bold"
+    android:onClick="callSeachProduct"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"></Button>
+    <Button
+        android:padding="15dp"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="@color/bracgreen"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:text="Scan Product"
+        android:onClick="callQRScanner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></Button>
+</LinearLayout>

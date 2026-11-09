@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:weightSum="100"
+    >
+
+    <LinearLayout
+        android:id="@+id/orderListRow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="5dp"
+        android:orientation="horizontal"
+        android:weightSum="100">
+
+        <TextView
+            android:id="@+id/sl_id"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+
+            android:layout_weight="5"
+            android:text="SL#"
+            android:textColor="@android:color/black"
+            android:gravity="center"
+            android:textSize="12dp"
+            android:visibility="gone">
+        </TextView>
+
+        <TextView
+            android:id="@+id/product_name_id"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="40"
+            android:gravity="center"
+            android:text="Product"
+            android:textColor="@android:color/black"
+            android:textSize="12sp"></TextView>
+
+        <TextView
+            android:id="@+id/uom_id"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="10"
+            android:text="Uom"
+            android:textSize="12sp"
+            android:textColor="@android:color/black"
+            android:gravity="center">
+        </TextView>
+        <TextView
+            android:id="@+id/qty_bag_id"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="14"
+            android:text="Qty"
+            android:textSize="12sp"
+            android:textColor="@android:color/black"
+            android:gravity="center"
+            >
+        </TextView>
+
+        <TextView
+            android:id="@+id/rate_id"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="18"
+            android:text="Rate"
+            android:textColor="@android:color/black"
+            android:textSize="12sp"
+            android:gravity="center"
+            >
+        </TextView>
+
+        <TextView
+            android:id="@+id/total_taka_id"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="18"
+            android:text="Total"
+            android:textSize="12sp"
+            android:textColor="@android:color/black"
+            android:gravity="center"
+            >
+        </TextView>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_margin="5dp"
+        android:background="@color/bluegrey" />
+
+</LinearLayout>

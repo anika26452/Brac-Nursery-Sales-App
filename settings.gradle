@@ -1,0 +1,2 @@
+rootProject.name = "Brac Nursery App"
+include ':app'

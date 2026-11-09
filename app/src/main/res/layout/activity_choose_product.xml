@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:padding="10dp"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    tools:context=".ChooseProductActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="30dp">
+            <TextView
+                android:textColor="@color/bracgreen"
+                android:textSize="15sp"
+                android:text="Select Parent Category"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"></TextView>
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:drawable/btn_dropdown"
+                android:id="@+id/parent_cat_spinner"
+                />
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="30dp">
+            <TextView
+                android:textColor="@color/bracgreen"
+                android:textSize="15sp"
+                android:text="Select Product Category"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"></TextView>
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:drawable/btn_dropdown"
+                android:id="@+id/org_spinner"
+                />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:weightSum="100"
+
+            >
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="35"
+                android:textSize="14sp"
+                android:backgroundTint="@android:color/holo_blue_bright"
+                android:textColor="#6a7170"
+                android:textColorHint="#6a7170"
+                android:textColorLink="#6a7170"
+                android:text="Product Search"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="10dp"/>
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="65"
+                android:gravity="center"
+                android:id="@+id/search_customer_editText"
+                android:backgroundTint="@color/bracgreen"
+                android:textColor="@android:color/black"
+                android:hint="Search"
+                android:textColorHint="#6a7170"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="5dp"
+            android:weightSum="100"
+            android:gravity="end"
+            >
+
+            <CheckBox
+                android:gravity="center"
+                android:layout_width="0dp"
+                android:layout_weight="64"
+                android:layout_height="wrap_content"
+                android:text="Search By Code"
+                android:textColor="#6a7170"
+                android:id="@+id/search_code_checkbox"
+
+                android:buttonTint="@color/bracgreen"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="20dp">
+
+
+            <TextView
+                android:textColor="@color/bracgreen"
+                android:textSize="15sp"
+                android:text="Select Product"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"></TextView>
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:drawable/btn_dropdown"
+                android:id="@+id/branch_spinner"
+                />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/avlqtylayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:textColor="@color/darkgreen"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:text="Available qty : "
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            </TextView>
+
+            <TextView
+                android:layout_marginLeft="15dp"
+                android:textColor="@color/darkgreen"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:text="0.0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/avlqty_vw">
+            </TextView>
+
+        </LinearLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add Product"
+            android:onClick="callConfirm"
+            android:textAllCaps="false"
+            android:backgroundTint="@color/darkgreen"
+            android:id="@+id/orgSelect_button"
+            android:padding="10dp"
+            android:layout_gravity="center"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cancel"
+            android:onClick="callCancel"
+            android:padding="10dp"
+            android:textAllCaps="false"
+            android:backgroundTint="@color/grey"
+            android:id="@+id/cancel_button"
+            android:layout_gravity="center"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            />
+
+    </LinearLayout>
+</ScrollView>

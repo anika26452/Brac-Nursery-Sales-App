@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/braclogo"
+        android:label="@string/app_name"
+        android:required="false"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.BracNurseryApp"
+        android:usesCleartextTraffic="true"
+        android:windowSoftInputMode="adjustResize">
+        <activity
+            android:name=".CheckHistory"
+            android:exported="false" />
+        <activity
+            android:name=".MortalityActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Menu"
+            android:exported="false" />
+        <activity
+            android:name=".SegmentActivity"
+            android:exported="false" />
+        <activity android:name=".ChooseProductActivity"
+            android:exported="false" />
+        <activity android:name=".HowToOrder"
+            android:exported="false" />
+        <activity android:name=".OrgBranchSelection"
+            android:exported="false" />
+        <activity android:name=".OrderLineAdapater"
+            android:exported="false" />
+        <activity android:name=".OrderLineModel"
+            android:exported="false" />
+        <activity android:name=".ProductOrderLine"
+            android:exported="false" />
+        <activity android:name=".ProductDetailsActivity"
+            android:exported="false"
+            android:configChanges="orientation|screenSize"/> <!-- added on 2025-06-24 by anika-->
+        <activity android:name=".QRScannerActivity"
+            android:exported="false" />
+        <activity android:name=".HomeActivity"
+            android:exported="false" />
+        <activity android:name=".ViewOrder"
+            android:exported="false" />
+        <activity android:name=".FullViewOrderActivity"
+            android:exported="false" />
+        <activity android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+    </application>
+
+</manifest>

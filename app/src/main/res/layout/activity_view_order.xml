@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context="com.sysnova.bracnurseryapp.ViewOrder">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:paddingTop="10dp"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:padding="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Order Date : "
+                android:textColor="@color/brdarkgreen"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:layout_marginRight="10sp"
+                android:padding="3dp">
+            </TextView>
+
+            <Button
+                android:id="@+id/date"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/brdarkgreen"
+                android:gravity="center"
+                android:text="Date" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:background="@color/brdarkgreen"
+            android:orientation="horizontal"
+            android:weightSum="100">
+
+            <TextView
+                android:text="SL"
+                android:textColor="@color/white"
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="8"
+                android:textAllCaps="false"
+                android:textStyle="bold"
+                android:textSize="11sp"
+                android:gravity="center">
+            </TextView>
+
+            <TextView
+                android:text="Serial"
+                android:textColor="@color/white"
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="25"
+                android:textAllCaps="false"
+                android:textStyle="bold"
+                android:textSize="11sp"
+                android:gravity="center">
+            </TextView>
+
+            <TextView
+                android:text="DocumentNo"
+                android:textColor="@color/white"
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="0"
+                android:textAllCaps="false"
+                android:textStyle="bold"
+                android:textSize="11sp"
+                android:gravity="center"
+                android:visibility="gone">
+            </TextView>
+
+            <TextView
+                android:text="Total Amount"
+                android:textColor="@color/white"
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="30"
+                android:textAllCaps="false"
+                android:textStyle="bold"
+                android:textSize="11sp"
+                android:gravity="center">
+            </TextView>
+
+            <TextView
+                android:text="Status"
+                android:textColor="@color/white"
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="20"
+                android:padding="10sp"
+                android:textAllCaps="false"
+                android:textStyle="bold"
+                android:textSize="11sp"
+                android:gravity="center">
+            </TextView>
+
+            <TextView
+
+                android:textColor="@color/white"
+                android:text="Details"
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="17"
+                android:padding="10sp"
+                android:textAllCaps="false"
+                android:textStyle="bold"
+                android:textSize="11sp"
+                android:gravity="center">
+            </TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="15dp"
+            android:layout_weight="10"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/no_list_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textStyle="bold">
+
+            </TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:layout_weight="67"
+            android:orientation="vertical">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/showorderinlist"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
